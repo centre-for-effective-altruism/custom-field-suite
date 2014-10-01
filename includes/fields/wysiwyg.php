@@ -119,7 +119,7 @@ class cfs_wysiwyg extends cfs_field
                     // set the wysiwyg css id
                     $(this).find('.wysiwyg').attr('id', input_id);
                     $(this).find('a.add_media').attr('data-editor', input_id);
-                    
+
                     // if all editors on page are in 'text' tab, tinyMCE.settings will not be set
                     if ('undefined' == typeof tinyMCE.settings) {
                         // let's pull from tinyMCEPreInit for main content area (if it's set)
@@ -132,10 +132,10 @@ class cfs_wysiwyg extends cfs_field
                                 wpautop : true,
                                 resize : 'vertical',
                                 toolbar2 : 'code'
-                            };  
+                            };
                         }
                     }
-                    
+
                     // add the "code" button
                     if ( tinyMCE.settings.toolbar2.indexOf('code') < 0) {
                         tinyMCE.settings.toolbar2 += ',code';
@@ -199,7 +199,7 @@ class cfs_wysiwyg extends cfs_field
 
 
     function format_value_for_input( $value, $field = null ) {
-        return wp_richedit_pre( $value );
+        return $value;
     }
 
 
