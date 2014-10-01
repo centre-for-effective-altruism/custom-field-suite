@@ -728,7 +728,7 @@ class cfs_api
             $values = isset( $field_array['value'] ) ? $field_array['value'] : $field_array;
 
             // Trigger the pre_save hook
-            $values = CFS()->fields[$field_type]->pre_save( $values, $params['all_fields'][$field_id] );
+            $values = CFS()->fields[$field_type]->pre_save( $values, $params['all_fields'][$field_id], $params['post_id'] );
 
             $sub_weight = 0;
 
